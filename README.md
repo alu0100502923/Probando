@@ -1,65 +1,32 @@
-Desarrollo de gema Ruby: Gestión de Exámenes 
-=======================
-[![Coverage Status](https://coveralls.io/repos/alu0100600810/LPP_T_03/badge.png?branch=desarrollo)](https://coveralls.io/r/alu0100600810/LPP_T_03?branch=master)
+Practica 09:
 
-## Descripción del equipo
+Joel Perez Ramos
+Juan Antonio Oliva Perez
 
-  * Nombre del equipo: **LPP_T_3**
-  * Miembros del equipo:
-    * Ayose Jesús Castillo Barroso
-    * César Ravelo Martínez
+TODO: Write a gem description
 
-## Descripción de la práctica
+## Installation
 
-  La práctica propone implementar una gema Ruby para representar exámenes de preguntas simples con pruebas RSpec para seguir el modelo TDD y su correcto funcionamiento. La estructura del repositorio es la siguiente:
+Add this line to your application's Gemfile:
 
-  * [Documentación](doc/)
-    * [Documentación de la Práctica](doc/)
-    * [Resultados de las Pruebas](doc/pruebas/index.html)
-  * [Librerías](lib/)
-    * [Gema Ruby](lib/examen/base.rb)
-    * [Código fuente de la clase Examen](lib/examen/examen.rb)
-    * [Código fuente de la clase Pregunta](lib/examen/pregunta.rb)
-    * [Códido fuente de la clase Pregunta Verdadero y Falso](lib/examen/pregunta_verdadero_falso.rb)
-  * [RSpec](spec/)
-  * [Fichero Rake con las tareas necesarias definidas](Rakefile)
-  * Fichero readme con esta documentación
+    gem 'question-simple_choice'
 
-
-
-
-# Examen
-
-Gema Ruby para representar exámenes formados por preguntas de selección simple. La secuencia de preguntas que pueda formar un examen
-viene definida como una lista enlazada simple definida en la misma clase Examen donde cada nodo representa una instancia de la clase Pregunta.
-
-## Instalación
-
-
-Añadir esta linea al Gemfile de su aplicación
-
-
-```ruby
-gem 'examen'
-```
-
-y ejecutar:
+And then execute:
 
     $ bundle
 
-O instálelo usted mismo:
+Or install it yourself as:
 
-    $ gem install examen
+    $ gem install question-simple_choice
 
-## Uso
+## Usage
 
-Para instanciar un objeto Pregunta basta con indicarle:
+TODO: Write usage instructions here
 
-* Una pregunta
-* Una respuesta correcta
-* Un conjunto de respuestas erróneas
+## Contributing
 
-Puede mostrar por pantalla la pregunta invocando el método [:to_s](lib/examen/pregunta.rb).
-
-Para instanciar un objeto Examen basta con indicarle una instancia de la clase Pregunta.
-Puede mostrar por pantalla la pregunta invocando el método [:to_s](lib/examen/examen.rb).
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
