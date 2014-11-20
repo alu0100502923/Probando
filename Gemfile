@@ -1,4 +1,8 @@
+# encoding: utf-8
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in P5_T_34.gemspec
+gem 'rake'
+group :development, :test do
+  gem 'rspec'
+end
 gemspec
