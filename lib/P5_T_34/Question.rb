@@ -1,39 +1,43 @@
 require "P5_T_34/version"
 
 module P5_T_34
-   #Clase Question implementa atributos para almacenar:
-   # una pregunta, una respuesta correcta, y varias 
-   # respuestas incorrectas ó distractor
    class Question
-     include Comparable  
-       
-     attr_reader :text, :correct, :distractor
+		attr_accessor :text, :right, :distractor, :value
+		
+		include Comparable
+	
+		def initialize (args)
+			@text = args[:text]
+			raise ArgumentError, 'Specify :text' unless @text
+	
+			@right = args[:right]
+			raise ArgumentError, 'Specify :right' unless @right
+	
+			@distractor = args[:distractor]
+			raise ArgumentError, 'Specify :distractor' unless @distractor
+			
+			@value = args[:value]
+			raise ArgumentError, 'Specify :value' unless @value
+		end
+	
+		def to_s
+			#binding.pry
+			options = @distractor+[@right]
+			options = options.shuffle
+			s = ''
+			options.each do |option|
+				s += %Q{->#{option}\n}
+			end
+			"#{@text}\n#{s}\n"
+		end
 
-     def initialize (textI, correctI, distractorI)
-        @text = textI
-        @correct = correctI
-        @distractor = distractorI.map{|i| i.to_s}
-     end
-     
-     #Devuelve el texto de la pregunta
-     def questioning
-        return text
-     end
-     
-     #Devuelve todas las respuestas posibles mezcladas
-     def answers
-        return (distractor + [correct]).shuffle
-     end
+		def <=>(other)
+			@value <=> other.value
+		end
+	end
+end
 
-     #Convierte las preguntas y las respuestas en una cadena de texto
-     def to_s
-        cont = 97
-	    result = text + "\n"
-	    answers.each{|i| result += cont.chr + ") " + i + "\n"; cont+=1}
-	    return result
-     end
-     def <=> (other)
-         @text.size <=> other.text.size
-     end
-   end
+if __FILE__ == $0 then
+	qq = Question::SimpleChoice.new(text: 'x*8=48', right: 6, distractor: [7,8,9], value: 2)
+	puts qq.to_s
 end
