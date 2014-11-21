@@ -16,9 +16,9 @@ class Exam
      @list << p
   end 
 
-  def push_back(*preguntas)
-    preguntas.each { |p| @list << p}
-    preguntas
+  def push_back(*questions)
+    questions.each { |p| @list << p}
+    questions
   end 
 
 end

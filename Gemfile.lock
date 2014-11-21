@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    examen (1.2.4)
+    exam (1.2.4)
 
 GEM
   remote: https://rubygems.org/
@@ -83,7 +83,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.7)
   coveralls
-  examen!
+  exam!
   guard
   guard-bundler
   guard-rspec

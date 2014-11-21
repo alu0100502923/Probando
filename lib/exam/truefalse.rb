@@ -1,7 +1,7 @@
 # encoding: utf-8
-require 'pregunta'
+require 'question'
 
-class PreguntaVerdaderoFalso < Pregunta
+class TrueFalse < Question
     
   def initialize(args)
     raise ArgumentError, "Esperada pregunta (:text)" unless args.key?(:text)

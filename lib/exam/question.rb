@@ -1,5 +1,5 @@
 # encoding: utf-8
-class Pregunta
+class Question
   attr_accessor :text, :right, :distractors, :difficulty
 
   include Comparable  

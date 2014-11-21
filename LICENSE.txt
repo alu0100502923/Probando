@@ -1,4 +1,4 @@
-Copyright (c) 2014 César Ravelo Martínez
+Copyright (c) 2014 Juan Oliva & Joel Pérez
 
 MIT License
 

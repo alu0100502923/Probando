@@ -1,10 +1,10 @@
 # encoding: utf-8
 require 'exam'
 
-class ExamenIu
+class ExamIu
   attr_accessor :exam
-  def initialize(pregunta)
-    @exam = Exam.new(pregunta)
+  def initialize(question)
+    @exam = Exam.new(question)
   end
 
   def test

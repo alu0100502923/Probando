@@ -1,5 +1,5 @@
 # coding: utf-8
-require "pregunta_verdadero_falso"
+require "truefalse"
  
 Nodo = Struct.new :value, :next, :prev
 
@@ -9,7 +9,7 @@ class Lista
   include Enumerable
 
   def initialize(p)
-    raise TypeError, "Esperada pregunta como parámetro de entrada" unless p.is_a? (Pregunta)
+    raise TypeError, "Esperada pregunta como parámetro de entrada" unless p.is_a? (Question)
     @cabeza = Nodo.new(p, nil, nil)
     @cola = @cabeza
     @total = 1
@@ -33,20 +33,20 @@ class Lista
   end
 
   def <<(p)    
-     raise TypeError, "Esperada pregunta para inserción" unless p.is_a? (Pregunta) 
+     raise TypeError, "Esperada pregunta para inserción" unless p.is_a? (Question) 
      @cola.next = Nodo.new(p, nil, @cola)
      @cola = @cola.next    
      @total += 1
      @cola.value
   end
 
-  def push_back(*preguntas)
-    preguntas.each do |p|
+  def push_back(*questions)
+    questions.each do |p|
       @cola.next = Nodo.new(p, nil, @cola)
       @cola = @cola.next
       @total += 1
     end
-    preguntas
+    questions
   end
 
    def to_s
