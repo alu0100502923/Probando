@@ -193,7 +193,7 @@ class ExamIu
     end
     context "ExamIu" do
       it "Debe tener un atributo examen" do
-        expect(@i).to respond_to :ex
+        expect(@i).to respond_to :exam
       end
       it "Debe inicializarse con una pregunta" do
         expect {ExamIu.new()}.to raise_error(ArgumentError)
