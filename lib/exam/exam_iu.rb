@@ -1,5 +1,5 @@
 # encoding: utf-8
-require 'exam'
+require 'exam/exam'
 
 class ExamIu
   attr_accessor :ex
