@@ -185,26 +185,26 @@ class Exam
   end  		
 end
 
-#class ExamIu
-#  describe ExamIu do
-#    before :each do
-#      @q = Question.new(:text => "2+2=", :right => 4, :distractors => [1, 2, 3])
-#      @i = ExamIu.new(@q)
-#    end
-#    context "ExamIu" do
- #     it "Debe tener un atributo examen" do
- #       expect(@i).to respond_to :exam
- #     end
-  #    it "Debe inicializarse con una pregunta" do
-  #      expect {ExamIu.new()}.to raise_error(ArgumentError)
- #       expect {ExamIu.new(Nodo.new(@q, nil, nil))}.to raise_error(TypeError)
- #     end
-  #    it "Debe tener un metodo test" do
-  #      expect(@i).to respond_to :test
- #     end
- #   end
- # end
-#end
+class ExamIu
+  describe ExamIu do
+    before :each do
+      @q = Question.new(:text => "2+2=", :right => 4, :distractors => [1, 2, 3])
+      @i = ExamIu.new(@q)
+    end
+    context "ExamIu" do
+      it "Debe tener un atributo examen" do
+        expect(@i).to respond_to :exam
+      end
+      it "Debe inicializarse con una pregunta" do
+        expect {ExamIu.new()}.to raise_error(ArgumentError)
+        expect {ExamIu.new(Nodo.new(@q, nil, nil))}.to raise_error(TypeError)
+      end
+      it "Debe tener un metodo test" do
+        expect(@i).to respond_to :test
+      end
+    end
+  end
+end
 
 
 class TrueFalse
