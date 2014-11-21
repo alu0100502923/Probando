@@ -2,16 +2,16 @@
 require 'exam'
 
 class ExamIu
-  attr_accessor :exam
+  attr_accessor :ex
   def initialize(question)
-    @exam = Exam.new(question)
+    @ex = Exam.new(question)
   end
 
   def test
-    result = Array.new(@exam.list.count, 0)
+    result = Array.new(@ex.list.count, 0)
     i = 0
     acertadas = 0
-    @exam.list.each do |p|
+    @ex.list.each do |p|
       pActual = p.to_s
       puts (i + 1).to_s + ") " + pActual
       STDOUT.flush
