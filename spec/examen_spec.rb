@@ -156,13 +156,10 @@ class Examen
       end
       it "Debe saber invertir la lista" do
         pp = Pregunta.new(:text => '2+2=', :right => 4 , :distractors => [9,3,5], :difficulty => 3)
-        @l << pp
-        ll = Lista.new(pp)
-        ll << @q
-        expect(@l.inv)== ll
-        expect(@l.inv {|p| p.difficulty > 3})== nil
-        ll.pop
-        expect(@l.inv {|p| p.difficulty == 3})== Lista.new(@q)
+        @l << pp        
+        expect(@l.inv.pop == pp).to be true
+        expect(@l.inv {|p| p.difficulty > 3} == nil).to be true
+        expect((@l.inv {|p| p.difficulty == 3}).pop).to eq(pp)
       end
     end
 
@@ -282,5 +279,56 @@ class PreguntaVerdaderoFalso
       end
     end
   end
+end
+
+class Quiz
+ describe Examen do
+   before :each do
+     @q = Quiz.new("Cuestionario LPP 05/12/2014") do
+     
+       question "¿Cuantos argumentos de tipo bloque puede recibir un metodo?",
+          right => "1",
+          wrong => "2",
+          wrong => "muchos",
+          wrong => "los que defina el usuario"
+
+       question "En Ruby los bloques son objetos que contienen codigo",
+          wrong => "Cierto",
+          right => "Falso"
+     end
+   end
+   context "Quiz" do
+
+     it "Debe tener un examen, un contador y un titulo" do
+        expect(@q.title)=="Cuestionario LPP 05/12/2014"
+        expect(@q.count)==2
+        expect(@q.exam.instance_of?Exam).to eq(true)
+     end
+     it "Debe mostrar examen" do
+        expect(@q).to respond_to :exam
+     end
+     it "Debe mostrar cantidad" do
+        expect(@q).to respond_to :count
+     end
+     it "Debe mostrar el titulo" do
+        expect(@q).to respond_to :title
+     end
+     it "Debe generar simbolo right" do
+        expect(@q).to respond_to :right
+        expect(@q.right.instance_of?Symbol).to eq(true) 
+     end
+     it "Debe generar Array como simbolo" do
+        expect(@q).to respond_to :wrong
+        expect(@q.wrong.instance_of?Array).to eq(true)
+     end
+     it "Debe saber leer una pregunta" do
+        expect(@q).to respond_to :question
+        expect(@q.question("2+2=", @q.right=> "4", @q.wrong=> "5")).to be_instance_of(Exam)
+     end
+     it "mostrarse correctamente" do
+        expect(@q.to_s).to match(/\s\s.+\n#+\n\n.+/)
+     end
+   end
+ end
 end
 
