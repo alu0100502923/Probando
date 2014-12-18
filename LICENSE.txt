@@ -1,4 +1,4 @@
-Copyright (c) 2014 Jose Mena
+Copyright (c) 2014 Carlos
 
 MIT License
 

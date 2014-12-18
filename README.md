@@ -1,16 +1,12 @@
-# Exam
+# Pract12
 
-TODO:
-Miembros del grupo: 
-Jose Alberto Mena Garcia(coordinador)
-Miguel Angel Delgado Hernandez(colaborador)
-Realizaremos la practica de ruby con RSpec para realizar un examen simple
+TODO: Write a gem description
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'exam'
+    gem 'pract12'
 
 And then execute:
 
@@ -18,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install exam
+    $ gem install pract12
 
 ## Usage
 
