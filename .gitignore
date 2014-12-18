@@ -11,4 +11,6 @@
 *.so
 *.o
 *.a
+*.swp
+/spec/*.swp
 mkmf.log

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in naranjero.gemspec
+# Specify your gem's dependencies in exam.gemspec
 gemspec
-gem 'coveralls', require: false
+
+    gem 'guard'
+    gem 'guard-rspec'
+    gem 'guard-bundler'

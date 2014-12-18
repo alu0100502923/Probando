@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'naranjero/version'
+require 'exam/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "naranjero"
-  spec.version       = Naranjero::VERSION
-  spec.authors       = ["alu0100837094"]
-  spec.email         = ["alu0100837094@ull.edu.es"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.name          = "exam"
+  spec.version       = Exam::VERSION
+  spec.authors       = ["alu0100785753"]
+  spec.email         = ["alu0100785753@ull.edu.es"]
+  spec.summary       = %q{Mi gema examen: Write a short summary. Required.}
+  spec.description   = %q{Una frase mas larga: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,13 +20,11 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake", "~> 10.0"
-  
   spec.add_development_dependency 'rspec', '~>2.11'
   
   spec.add_development_dependency "guard"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "guard-bundler"
-  
   spec.add_development_dependency "coveralls"
-  
+
 end

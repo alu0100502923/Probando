@@ -1,0 +1,19 @@
+Wed, 26 Nov 2014 11:32:37 +0000
+./exam.gemspec	Wed, 19 Nov 2014 13:17:02 +0000
+./Guardfile	Mon, 17 Nov 2014 23:26:09 +0000
+./Gemfile.lock	Wed, 19 Nov 2014 14:00:25 +0000
+./LICENSE.txt	Wed, 29 Oct 2014 09:45:30 +0000
+./Gemfile	Wed, 29 Oct 2014 11:24:02 +0000
+./Rakefile	Wed, 29 Oct 2014 11:21:19 +0000
+./README.md	Wed, 19 Nov 2014 13:49:03 +0000
+./lib/exam.rb	Wed, 19 Nov 2014 11:54:48 +0000
+./lib/exam/interfaz.rb	Wed, 19 Nov 2014 12:03:36 +0000
+./lib/exam/doble_list.rb	Wed, 26 Nov 2014 11:21:27 +0000
+./lib/exam/seleccionsimple.rb	Mon, 17 Nov 2014 23:36:25 +0000
+./lib/exam/vof.rb	Wed, 19 Nov 2014 11:28:04 +0000
+./lib/exam/version.rb	Wed, 29 Oct 2014 09:45:31 +0000
+./lib/exam/list.rb	Wed, 26 Nov 2014 11:17:21 +0000
+./lib/exam/examen.rb	Tue, 25 Nov 2014 22:53:34 +0000
+./lib/exam.old.rb	Mon, 03 Nov 2014 11:45:18 +0000
+./spec/exam_spec.rb	Wed, 26 Nov 2014 11:29:49 +0000
+./spec/spec_helper.rb	Wed, 19 Nov 2014 13:20:10 +0000
