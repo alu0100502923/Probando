@@ -1,13 +1,16 @@
 class Examen
-
- attr_accessor :exam, :npreguntas
-    def initialize(n)
-      @exam= Doble_list.new
-      @npreguntas=n
+    
+    attr_accessor :preguntas, :respuestas
+    
+    def initialize preg, resp
+        @preguntas = preg
+        @respuestas = resp
+        @reverse = Proc.new{|x| x.to_reverse}
     end
-   
-    def add_pregunta(pre)
-        @exam.push_fin(pre)
+    
+    
+    def to_reverse
+        @reverse.call(@preguntas) 
     end
-   
+    
 end

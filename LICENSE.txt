@@ -1,4 +1,4 @@
-Copyright (c) 2014 alu0100785753
+Copyright (c) 2014 Jose Mena
 
 MIT License
 
