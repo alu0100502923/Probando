@@ -1,7 +1,9 @@
 /.bundle/
 /.yardoc
+/Gemfile.lock
 /_yardoc/
 /coverage/
+/doc/
 /pkg/
 /spec/reports/
 /tmp/
@@ -10,5 +12,3 @@
 *.o
 *.a
 mkmf.log
-*~
-*.swp

@@ -1,6 +1,10 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+# Uncomment and set this to only include directories you want to watch
+#
+# directories %(app lib config test spec feature)
+
 guard :bundler do
   watch('Gemfile')
   # Uncomment next line if your Gemfile contains the `gemspec' command.
@@ -17,8 +21,7 @@ end
 #  * 'just' rspec: 'rspec'
 guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^spec/.+_spec\.rb$})
-  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/#{m[1]}_spec.rb" }
-  watch(%r{^lib/examen/(.+)\.rb$})     { "spec/examen_spec.rb" }
+  watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
 
   # Rails example
